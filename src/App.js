@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+function Card(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="Card">
+      <header className="Card-header">
+        <h2 className="Card-header_title">{props.title}</h2>
       </header>
+      <main className="Card-main">
+        <div className="Card-main_description">
+          <ul className="Card-main_description__list">
+            <li className="Card-main_description__list-obj">
+              Вселенная: {props.universe}
+            </li>
+            <li className="Card-main_description__list-obj">
+              Альтер эго: {props.alterego}
+            </li>
+            <li className="Card-main_description__list-obj">
+              Род деятельности: {props.occupation}
+            </li>
+            <li className="Card-main_description__list-obj">
+              Друзья: {props.friends}
+            </li>
+            <li className="Card-main_description__list-obj">
+              Суперсилы: {props.superpowers}
+            </li>
+          </ul>
+        </div>
+        <div className="Card-main_photo">
+          <img src={props.imgLink} alt={props.title}></img>
+        </div>
+        <div className="Card-main_info">{props.info}</div>
+      </main>
     </div>
   );
 }
 
-export default App;
+export default Card;
