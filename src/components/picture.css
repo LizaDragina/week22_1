@@ -1,0 +1,8 @@
+.Card-main_picture {
+  margin: 25px 0 25px 0;
+  display: flex;
+  justify-content: center;
+}
+.Card-main_picture > img {
+  width: 400px;
+}
