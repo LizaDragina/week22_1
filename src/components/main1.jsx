@@ -1,31 +1,22 @@
 import React from "react";
 import "./main.css";
 
-function main({
-  universe,
-  alterego,
-  occupation,
-  friends,
-  superpowers,
-  imgLink,
-  info,
-  title,
-}) {
+function main(props) {
   return (
     <main className="Card-main">
       <div className="Card-main_description">
         <ul className="Card-main_description__list">
-          <li>Вселенная: {universe}</li>
-          <li>Альтер эго: {alterego}</li>
-          <li>Род деятельности: {occupation}</li>
-          <li>Друзья: {friends}</li>
-          <li>Суперсилы: {superpowers}</li>
+          <li>Вселенная: {props.universe}</li>
+          <li>Альтер эго: {props.alterego}</li>
+          <li>Род деятельности: {props.occupation}</li>
+          <li>Друзья: {props.friends}</li>
+          <li>Суперсилы: {props.superpowers}</li>
         </ul>
       </div>
       <div className="Card-main_picture">
-        <img src={imgLink} alt={title}></img>
+        <img src={props.imgLink} alt={props.title}></img>
       </div>
-      <div className="Card-main_info">{info}</div>
+      <div className="Card-main_info">{props.info}</div>
     </main>
   );
 }
